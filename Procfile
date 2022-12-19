@@ -1,0 +1,1 @@
+web: gunicorn authwiki.wsgi:application --log-file -
