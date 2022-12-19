@@ -1,0 +1,138 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	width: 100%;
+}
+html,
+body {
+	background-color: #d7dbff;
+	height: 100vh;
+}
+/* styling for the general topnav */
+#topnav {
+	display: flex;
+	color: #0d1848;
+	margin: auto;
+	padding: 15px;
+	width: 100%;
+	height: 70px;
+	position: relative;
+	overflow: hidden;
+}
+/* styling for the search bar */
+.search {
+	display: flex;
+	margin: auto;
+	margin-left: 100px;
+
+	border: 1px solid #0d1848;
+	border-radius: 8px;
+	padding: 2px;
+	padding-left: 15px;
+}
+.search input {
+	border: none;
+	border-right: none;
+	border-radius: 5px;
+	padding: 2px;
+	background-color: #d7dbff;
+}
+.search button {
+	border: none;
+	background-color: #d7dbff;
+	padding-left: 50px;
+}
+#topnav a {
+	text-decoration: none;
+	margin-left: 25px;
+	margin-top: 10px;
+	color: #0d1848;
+
+	text-align: center;
+	padding-left: 20px;
+}
+i {
+	text-align: center;
+	margin: auto;
+	color: black;
+	opacity: 0.5;
+}
+#profile img {
+	width: 50px;
+	height: 50px;
+	border: 1px solid;
+	border-radius: 50%;
+	margin-left: 15px;
+	float: left;
+}
+#profile a {
+	margin: auto;
+	padding: 15px;
+	justify-self: center;
+}
+/* styling for the sidebar */
+#main {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+}
+#sidebar {
+	height: 100vh;
+	width: 10%;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	overflow-x: hidden;
+	margin: 20px;
+}
+#sidebar a {
+	text-decoration: none;
+	display: block;
+}
+#sidebar a.active {
+	border: 1px black;
+	border-radius: 8px;
+	background-color: #ffffff;
+}
+a:hover {
+	background-color: #ffffff;
+	border-radius: 8px;
+	transition: all;
+}
+.form {
+	background-color: #ffffff;
+	padding: 30px;
+	border: 1px;
+	border-radius: 20px;
+	margin-top: 20px;
+	height: 90%;
+	width: 80%;
+}
+.form .inner {
+	background-color: #d7dbff;
+	padding: 100px;
+	border: 1px solid #0d1848;
+	border-radius: 15px;
+	margin: 30px;
+	margin-top: 60px;
+	margin-left: 50px;
+	width: 90%;
+}
+input {
+	width: 80%;
+	height: 7%;
+	border-radius: 4px;
+}
+#btn {
+	background-color: #121955;
+	color: #ffffff;
+	width: 20%;
+	font-weight: 900;
+}
+#btn:hover {
+	background-color: antiquewhite;
+	color: #0d1848;
+	transition-delay: 0.3s;
+}
+/* @media screen and (max-width: 600px) and (min-width:400px){ */

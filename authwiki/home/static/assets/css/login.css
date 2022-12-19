@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #D7DBFF;
+}
+.logo{
+    display: flex;
+    gap: 10px;
+    left: 64px;
+    top: 36px;
+}
+.logo img{
+    width: 60px;
+    height: 60px;
+    
+}
+.img-fluid{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: 128px;
+    top: 241px;
+}
+.form-frame{
+    position: absolute;
+    width: 756px;
+    height: 100vh;
+    left: 756px;
+    top: 0px;
+    background-color: #FFFFFF;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* gap: 10px; */
+}
+.form-box{
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    width: 60%;
+
+}
+.field{
+    margin-top: 40px;
+    width: 100%;
+    cursor: pointer;
+}
+.form-control{
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.btn1{
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    background-color: #121955;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.btn1:hover{
+    background-color: white;
+    border: 1px solid;
+    color: black;
+}
+.forgot-password{
+    margin-left: 308px;
+}
+.vstack{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hstack{
+    align-self: center;
+}
+.btn{
+    text-align: center;
+    height: 35px;
+    position: relative;
+    display: flex;
+    gap: 10px;
+}
+.fa-brands{
+    height: 90px;
+
+}
+.p-tag{
+    text-align: center;
+}

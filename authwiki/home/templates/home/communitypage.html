@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community</title>
+    <link rel="stylesheet" href="{% static 'assets/css/communitypage.css' %}"/>
+
+</head>
+
+<body>
+<main>
+
+
+<div class="a"><img src="{% static 'assets/img/crona_icon.png' %}" alt="icon" width="50px" class="auth">
+
+<span class="auth1"> Authwiki</span>
+
+    <span class="search"><input type="search" placeholder="Search" ></span>
+     <span class="resources" >Resources</span>
+    <span><button type="button" class="feedback"><a href="{% url 'home:feedback' %}" class="feed">Feedback</a></button></span>
+    <img src="{% static 'assets/img/icon1.png' %}" alt="img" width="50px" class="img"> <h class="edit"></h><a href="{% url 'userapp:profile' %}">Edit</a>
+
+
+<span>
+    <div class="side-bar">
+    <img src="{% static 'assets/img/get_started.png' %}" alt="" width="30px"></a>
+    <a href="{% url 'home:dashboard' %}"><p class="text">Get Started </p></a>
+</div>
+
+<div class="side-bar">
+    <img src="{% static 'assets/img/community_icon.png' %}" alt="" width="25px"></a>
+    <p class="text"><a href="{% url 'home:community' %}" class="active" >Community</a> </p>
+</div>
+
+<div class="side-bar">
+    <img src="{% static 'assets/img/code_icon.png' %}" alt="" width="25px"></a>
+    <p class="text"><a href="{% url 'home:error' %}">Auth Library</a> </p>
+</div>
+
+<div class="side-bar">
+    <img src="{% static 'assets/img/bookmarks_icon.png' %}" alt="" width="25px"></a>
+    <p class="text"><a href="{% url 'home:community3' %}">Bookmarks</a> </p>
+</div>
+
+<div class="side-bar">
+    <img src="{% static 'assets/img/log_icon.png' %}" alt="" width="25px" ></a>
+    <p class="text"><a href="{% url 'home:error' %}">Logs</a> </p>
+</div>
+
+<div class="side-bar">
+    <img src="{% static 'assets/img/log_out_icon.png' %}" alt="" width="25px" ></a>
+    <p class="text"><a href="{% url 'userapp:logout_user' %}">Log Out</a> </p>
+</div>
+</span>
+
+    <div class="b">
+        <div class="community">Community <a href="{% url 'home:community2' %}" class="post"> <img src="{% static 'assets/img/drawing_pencil_icon.png' %}"><h5 class="pen">Create Post</h5> </a></div>
+        <div class="hope1"  > <img src="{% static 'assets/img/icon1.png' %}" alt="icon" width="40px">
+        <p class="name">Hope Damilola Yakubu</p>
+        <p class="name1">2 Years Ago</p>
+        </div>
+
+        <div class="hope2">
+        <p class="JQL"><br>JQLParseException: Cannot execute JQL query in ScriptRunner to print number
+            of issues havng a specific value for the summary field.
+
+            <div>
+            <button class="button1"><h class="angular">Angular</button> <button class="button1"><h class="angular">Azure</button> <button class="button1"><h class="angular">webdeploy</button>
+            </div>
+            <div class="icon1"><img src="{% static 'assets/img/hand_thumbs_up_icon.png' %}" alt="thumbup" width="25px"> <p class="icon_text"> 5000 </p> <h class="icon1"><img src="{% static 'assets/img/chat_ux_icon.png' %}" alt="" width="20px"> <p class="icon_text"> 200 </p>
+        </div></div>
+
+        <div class="felix1"><img src="{% static 'assets/img/icon2.png' %}" alt="icon" width="40px">
+        <p class="name">Felix Micheal</p>
+        <p class="name1">A Year Ago</p>
+    </div>
+        <div class="felix2"><p class="JQL"><br>JQLParseException: Cannot execute JQL query in ScriptRunner to print number
+            of issues havng a specific value for the summary field.
+
+            <div >
+                <button class="button2"><h class="angular">Angular</button> <button class="button2"><h class="angular">Azure</button> <button class="button2"><h class="angular">webdeploy</button>
+                </div>
+                <div class="icon1"><img src="{% static 'assets/img/hand_thumbs_up_icon.png' %}" alt="thumbup" width="25px"> <p class="icon_text">3000</p> <h class="icon1"><img src="{% static 'assets/img/chat_ux_icon.png' %}" alt="" width="20px"> <p class="icon_text"></p>700
+        </div>
+    </div>
+</div>
+</main>
+</body>

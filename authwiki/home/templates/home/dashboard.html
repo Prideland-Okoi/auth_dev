@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dashboard</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="{% static 'assets/css/dashboard.css' %}" />
+	</head>
+	<body>
+		<header>
+			<div id="topnav">
+				<img
+					style="width: 40px; height: 30px"
+					src="{% static 'assets/img/crona_icon.png' %}"
+					alt="Logo" />
+				<h1>Authwiki</h1>
+				<form action="" class="search">
+					<input type="text" placeholder="search" /><button type="submit">
+						<i class="fa fa-fw fa-search"></i>
+					</button>
+				</form>
+
+				<a
+					href="{% url 'home:community3' %}"
+					style="font-family: 'Roboto';"
+					>Resource</a
+				>
+				<a
+					href="{% url 'home:feedback' %}"
+					style="font-family: 'Roboto';"
+					>Feedback</a
+				>
+				<i class="fa fa-bell"></i>
+
+				<div id="profile">
+					<img src="{% static 'assets/img/profile_pics.jpg' %}" alt="Profile Picture" />
+					<a href="{% url 'userapp:profile' %}">Edit</a>
+				</div>
+			</div>
+		</header>
+		<main id="main">
+			<div id="sidebar">
+				<a class="active" href="#"
+					><i class="fa fa-fw fa-book"></i>Get Started</a
+				><br /><br />
+				<a href="{% url 'home:community' %}"><i class="fa fa-fw fa-group"></i>Community</a><br /><br />
+				<a href="{% url 'home:error' %}"><i class="fa fa-fw fa-code"></i>Auth Library</a><br /><br />
+				<a href="{% url 'home:error' %}"><i class="fa fa-fw fa-bookmark"></i>Bookmarks</a
+				><br /><br />
+				<a href="#"><i class="fa fa-fw fa-sitemap"></i>Logs</a><br /><br />
+				<a href="{% url 'userapp:logout_user' %}"><i class="fa fa-fw fa-sign-out"></i>Log Out</a><br /><br />
+			</div>
+			<div id="dashboard">
+				<div id="first">
+					<div class="box1">
+						<h3>Welcome!</h3>
+						<br />
+						<div class="flexed part"><p>The best place to download codes and makes work easier</p>
+
+						<img
+							style="width: 150px; height: 80px"
+							src="{% static 'assets/img/computer_login.png' %}"
+							alt="icon" />
+						</div>
+							<button>Search codes</button>
+					</div>
+					<div class="box2">
+						<img src="{% static 'assets/img/crona_icon.png' %}"
+							alt="logo" />
+						<p><ul>
+							<li>Decode</li>
+							<li>The</li>
+							<li>Codes</li>
+						</ul></p>
+					</div>
+				</div>
+				<div id="second">
+					<div class="box1">
+					<p>Total Active Users</p><br>
+					<P style="font-size: xx-large;">1000</P>
+					</div>
+					<div class="box2">
+						<p>Total Install</p><br>
+						<p style="font-size: xx-large;">2000</p>
+
+					</div>
+					<div class="box3">
+						<p>Total Downloads</p><br>
+						<p style="font-size: xx-large;">3000</p>
+					</div>
+
+
+				</div>
+
+				<p style="color:#091030 ; font-weight: bold;">Recommended</p>
+
+
+<div id="third"><img style="width: 500px; height: 150px;" src="{% static 'assets/img/images.png' %}" alt="code.png">
+	<img style="width: 500px; height: 150px;" src="{% static 'assets/img/images.png' %}" alt="code.png"></div>
+<br><div class="done"><button>See More</button></div>
+				<br><p style="color:#091030 ; font-weight: bold;">Community</p><br>
+<div id="fourth">
+	<p>Check the codes others are recommending, interact and connect with like minds</p><br>
+
+	<a href="{% url 'home:community' %}">Connect</a>
+</div>
+			</div>
+
+		</main>
+
+	</body>
+
+</html>

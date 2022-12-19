@@ -1,0 +1,338 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Authwiki</title>
+		<link rel="stylesheet" href="{% static 'assets/vendors/mdi/css/materialdesignicons.min.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/vendors/owl.carousel/css/owl.carousel.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/vendors/owl.carousel/css/owl.theme.default.min.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/vendors/aos/css/aos.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/vendors/jquery-flipster/css/jquery.flipster.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/css/home.css' %}">
+		<!-- <link rel="shortcut icon" href="images/favicon.png" /> -->
+	</head>
+	<body data-spy="scroll" data-target=" " data-offset="50">
+
+		<div id="mobile-menu-overlay"></div>
+
+
+		<!-- Navbar section -->
+		<nav class="navbar navbar-expand-lg fixed-top">
+			<div class="container">
+				<a class="navbar-brand" href="#"><img src="{% static 'assets/img/crona_icon.png' %}" alt="logo" style="width:50px; height: 50px;"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"><i class="mdi mdi-menu"> </i></span>
+				</button>
+				<div class="collapse navbar-collapse d-flex justify-content-around" id="navbarTogglerDemo01">
+					<div>
+						<div class="d-lg-none px-4 py-3 align-items-center">
+							<img src="{% static 'assets/img/crona_icon.png' %}" class="logo-mobile-menu" alt="logo">
+							<a href="javascript:;" class="close-menu"><i class="mdi mdi-close"></i></a>
+
+						</div>
+						<h3 class="logo-name font-weight-medium text-dark" style="color: #0D1848;">AuthWiki</h3>
+
+					</div>
+
+						<a class="nav-link" href="{% url 'home:home' %}">Home <span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="#services">Resources</a>
+						<a class="nav-link" href="{% url 'home:community' %}">Community</a>
+
+					<div class="d-flex justify-content-around">
+						{% if user.is_authenticated %}
+						<a class="nav-link btn btn-success mx-2" href="{% url 'userapp:login' %}" style="border-radius: 8px; background: transparent; border: 2px solid #0A0798;">Log in</a>
+{% else %}
+						<a class="nav-link btn btn-success mx-2" href="{% url 'userapp:register' %}" style="border-radius: 8px; background: #0A0798; border: none;">Sign Up</a>
+{% endif %}
+					</div>
+				</div>
+			</div>
+			<a>Welcome, {{user.first_name.title|default:'Guest'}}</a>
+		</nav>
+		{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+		<!-- hero section -->
+		<div class="page-body-wrapper">
+			<section id="home" class="home">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="main-banner">
+								<div class="hero d-sm-flex justify-content-between">
+									<div class="hero-text" data-aos="zoom-in-up">
+										<div class="banner-title">
+												<h5 class="h5-text" style="color: black; font-family: 'Inter';
+												font-weight: 600;
+												font-size: 30px;
+												line-height: 150%;">Have you been searching for an all in one platform that offers you an opportunity to have access to a wide-range colection of developers, Interect with other developers and more?
+													You’re at the right place.
+											</h5>
+										</div>
+										<p class="mt-3" style="color: black;font-family: 'Inter';
+										font-style: normal;
+										font-weight: 500;
+										font-size: 25px;
+										line-height: 150%;">Auth-wiki is a platform that gives users access
+										to a library of access codes, enabling them to interact, contribute
+										and as well download code samples.
+										</p>
+
+									</div>
+									<div class="hero-image mt-5 mt-lg-0">
+										<img src="{% static 'assets/img/authentication_icon.png' %}" alt="marsmello" class="img-fluid" data-aos="zoom-in-up">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- services section -->
+			<section class="our-services" id="services" style="margin-top: 50px; text-align: center;">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="col-sm-12">
+							<a href="#" class="btn btn-secondary mt-3" style="margin: 30px 0; border-radius: 8px; text-align: center;
+							width: 200px;
+							height: 50px;
+							background: #0A0798;">Browse Libraries</a>
+						</div>
+						<div class="col-sm-12">
+							<h5 class="text-dark" style="line-height: 200%">AuthWik combines the best developer experience with an obssessive focus on end-end performance.
+								Our platform enables teams to do their best work.</h5>
+						</div>
+						<div class="col-sm-12">
+							<h3 class="font-weight-medium text-dark mb-5" style="line-height: 200%">Get Started With Pre-Written Authentication
+								<br>Codes Anytime
+							</h3>
+						</div>
+					</div>
+					<div class="my-5" data-aos="fade-up">
+						<div class="d-flex justify-content-around" >
+							<a href="#" class="btn btn-secondary mt-3" style="border-radius: 8px; background: #0A0798; border: none;" ">JS</a>
+							<a href="#" class="btn btn-secondary mt-3" style="border-radius: 8px; background: transparent; border: 2px solid #0A0798;color: #0A0798; ">PHP</a>
+							<a href="#" class="btn btn-secondary mt-3" style="border-radius: 8px; background: transparent; border: 2px solid #0A0798; color: #0A0798;">Python</a>
+							<a href="#" class="btn btn-secondary mt-3" style="border-radius: 8px; background: transparent; border: 2px solid #0A0798; color: #0A0798;">C#</a>
+							<a href="#" class="btn btn-secondary mt-3" style="border-radius: 8px; background: transparent; border: 2px solid #0A0798; color: #0A0798;">GOLang</a>
+							<a href="#" class="btn btn-secondary mt-3" style="border-radius: 8px; background: transparent; border: 2px solid #0A0798; color: #0A0798;">C++</a>
+							<a href="#" class="btn btn-secondary mt-3" style="border-radius: 8px; background: transparent; border: 2px solid #0A0798; color: #0A0798;">TS</a>
+
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<!-- About section -->
+			<section class="our-process my-4 pb-5" id="about" style="background: #D7DBFF; ">
+				<div class="container">
+					<div class="d-flex justify-content-center" style="text-align: center; line-height: 200%;">
+						<div  data-aos="fade-up ">
+							<h1 class="font-weight-medium text-dark">Auth-Wiki Authentication Codes</h1>
+							<h5 class="text-dark mt-3">The Various authentication codes we have for Php, Nodejs and Phython Languages</h5>
+							<h3 class="text-dark mb-3">Token-Based Authentication</h3>
+							<p class="font-weight-medium mb-4">A protocol that generates encrypted security tokens. It enables users to verify their identity to websites, which then generates a unique encrypted authentication token...
+							</p>
+							<img src="{% static 'assets/img/code_one.jpg' %}" alt="idea" class="img-fluid">
+						</div>
+
+					</div>
+				</div>
+			</section>
+			<section class="our-projects" id="projects">
+				<div class="container">
+					<div class="row mb-5">
+						<div class="col-sm-12">
+							<div class="d-sm-flex-column justify-content-between align-items-center mb-2" style="text-align: center;">
+								<h3 class="font-weight-medium text-dark my-3">Why Choose Auth-Wiki </h3>
+								<p class="mt-2 mb-5">Auth-Wiki is specially designed as a home of authentication codes</p>
+								<!-- <div><a href="#" class="btn btn-outline-primary">View more</a></div> -->
+							</div>
+							<div class="d-flex justify-content-around">
+								<div class="projects-box">
+									<h3>Documentation</h3>
+									<p>The use, operation, maintenance of the authentication codes are listed and explained for easy use by the developers.</p>
+								</div>
+								<div class="projects-box">
+									<h3>Download</h3>
+									<p>We provide a download option for Authenticated and verified users to use the codes when they please and in any instance. </p>
+								</div>
+								<div class="projects-box">
+									<h3>Community</h3>
+									<p>Auth-wiki provides a community of developers and codes. Interactions, comments and duplication.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			<!--  -->
+			</section>
+			<!-- <section class="testimonial" id="testimonial">
+				<div class="container">
+					<div class="row  mt-md-0 mt-lg-4">
+						<div class="col-sm-6 text-white" data-aos="fade-up">
+							<p class="font-weight-bold mb-3">Testimonials</p>
+							<h3 class="font-weight-medium">Our customers are our <br>biggest fans</h3>
+							<ul class="flipster-custom-nav">
+								<li class="flipster-custom-nav-item">
+									<a href="javascript:;" class="flipster-custom-nav-link" title="0"></a>
+								</li>
+								<li class="flipster-custom-nav-item">
+									<a href="javascript:;" class="flipster-custom-nav-link"  title="1"></a>
+								</li>
+								<li class="flipster-custom-nav-item">
+									<a href="javascript:;" class="flipster-custom-nav-link active" title="2"></a>
+								</li>
+								<li class="flipster-custom-nav-item">
+									<a href="javascript:;" class="flipster-custom-nav-link"  title="3"></a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-sm-6" data-aos="fade-up">
+							<div id="testimonial-flipster">
+								<ul>
+									<li>
+										<div class="testimonial-item">
+											<img src="{% static 'assets/img/testimonial1.jpg' %}" alt="icon" class="testimonial-icons">
+											<p>Lorem ipsum dolor sit amet, consectetur
+												pretium pretium tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium
+											</p>
+											<h6 class="testimonial-author">Mark Spenser</h6>
+											<p class="testimonial-destination">Accounts</p>
+										</div>
+									</li>
+									<li>
+										<div class="testimonial-item">
+											<img src="{% static 'assets/img/testimonial2.jpg' %}" alt="icon" class="testimonial-icons">
+											<p>Lorem ipsum dolor sit amet, consectetur
+												pretium pretium tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium
+											</p>
+											<h6 class="testimonial-author">Tua Manuera</h6>
+											<p class="testimonial-destination">Director,Dj market</p>
+										</div>
+									</li>
+									<li>
+										<div class="testimonial-item">
+											<img src="{% static 'assets/img/testimonial3.jpg' %}" alt="icon" class="testimonial-icons">
+											<p>Lorem ipsum dolor sit amet, consectetur
+												pretium pretium tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium
+											</p>
+											<h6 class="testimonial-author">Sarah Philip</h6>
+											<p class="testimonial-destination">Chief Accountant</p>
+										</div>
+									</li>
+									<li>
+										<div class="testimonial-item">
+											<img src="{% static 'assets/img/testimonial4.jpg' %}" alt="icon" class="testimonial-icons">
+											<p>Lorem ipsum dolor sit amet, consectetur
+												pretium pretium tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium
+											</p>
+											<h6 class="testimonial-author">Mark Spenser</h6>
+											<p class="testimonial-destination">Director,Dj market</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section> -->
+
+			<section class="our-process my-5" id="about">
+				<div class="container d-flex justify-content-center" style="text-align: center;">
+					<div>
+						<div>
+							<h6 class="font-weight-medium text-dark my-3">Get unlimited access to all of Auth-wiki features, join the Community today. </h6>
+							<h1 class="text-dark mb-5" style="font-weight: 700;">Enhance your productivity, Get started!</h1>
+							<div><a href="{% url 'userapp:register' %}" class="btn btn-outline-primary" style="border-radius: 8px;">Sign Up</a></div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="contactus my-5 trapezoid" id="contact">
+				<div class="container py-5 d-flex justify-content-center" style="width: 1216px; height: 570px;	background: #D7DBFF;  border-width: 0 0 4em 8em;">
+					<div class="mb-5 pb-5" style="text-align: center; width: 50rem;">
+
+						<div  data-aos-offset="-500">
+							<h3 class="font-weight-medium text-dark mt-5 mt-lg-0" style="color: #121955; font-weight: 700;
+							font-size: 3rem;">Subscribe to our newsletter</h3>
+							<h5 class="text-dark mb-5" style="line-height: 200%;">Stay updated on our latest news. We promise only valuable mails
+								<br>and we will not span you with unnecessaries
+							</h5>
+							<form class="d-flex justify-content-center" method="POST">
+								{% csrf_token %}
+											<input type="email" name="email" class="form-control" id="mail" placeholder="Enter Email">
+											<input type="submit" class="form-control" id="mail" placeholder="Get Started" style="width: 300px; color: #D7DBFF; background: #121955;">
+
+
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer class="footer">
+			<div class="footer-top">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+
+						<div class="col-sm-6">
+							<div class="row">
+								<div class="col-sm-4">
+									<h6 class="footer-title">Company</h6>
+									<ul class="list-footer" >
+										<li><a href="#" class="footer-link" style="color: #121955;">Home</a></li>
+										<li><a href="#" class="footer-link" style="color: #121955;">Blog</a></li>
+										<li><a href="#" class="footer-link" style="color: #121955;">Our Team</a></li>
+										<li><a href="#" class="footer-link" style="color: #121955;">Contact Us</a></li>
+										<li><a href="#" class="footer-link" style="color: #121955;">Security</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-4">
+									<h6 class="footer-title">Resources</h6>
+									<ul class="list-footer">
+										<li><a href="#" class="footer-link" style="color: #121955;">Guides</a></li>
+										<li><a href="#" class="footer-link" style="color: #121955;">Example</a></li>
+										<li><a href="#" class="footer-link" style="color: #121955;">Integrations</a></li>
+										<li><a href="#" class="footer-link" style="color: #121955;">Support</a></li>
+										<li><a href="#" class="footer-link" style="color: #121955;">Documentation</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-4">
+									<h6 class="footer-title">Connect with us</h6>
+									<div class="d-flex justify-content-around">
+										<a href="#"><i class="mdi mdi-github-circle"></i></a>
+										<a href="#"><i class="mdi mdi-facebook-box"></i></a>
+										<a href="#"><i class="mdi mdi-twitter"></i></a>
+										<a href="#"><i class="mdi mdi-dribbble"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</footer>
+		<script src="{% static 'assets/vendors/base/vendor.bundle.base.js' %}"></script>
+		<script src="{% static 'assets/vendors/owl.carousel/js/owl.carousel.js' %}"></script>
+		<script src="{% static 'assets/vendors/aos/js/aos.js' %}"></script>
+		<script src="{% static 'assets/vendors/jquery-flipster/js/jquery.flipster.min.js' %}"></script>
+		<script src="{% static 'assets/js/template.js' %}"></script>
+	</body>
+</html>

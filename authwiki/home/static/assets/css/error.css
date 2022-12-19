@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@700&family=Inter:wght@600&family=Lexand+Deca&display=swap")
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@700&family=Inter:wght@600&family=Lexend+Deca&family=Roboto:wght@500&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #1E1E1E;
+  height: 100vh;
+}
+#container{
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  right: 10%;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  height: 480px;
+  width: 800px;
+  border: 1px solid darkblue;
+  border-radius: 10px;
+}
+#container .content{
+  max-width: 600px;
+  text-align: center;
+}
+.logo{
+  position: absolute;
+  width: 30px;
+  height: 40px;
+  top: 5%;
+  left: 3%;
+  color: #C4C4C4;
+}
+span{
+  position: absolute;
+  top: 5%;
+  left: 3%;
+  font-size: 25px;
+  font-family: 'Roboto';
+  padding-left: 35px;
+  color: #0D1418
+}
+h2{
+  font-size: 50px;
+  color: #0D1848;
+  text-align: center;
+  margin-top: 70px;
+  position: absolute;
+  right: 35%;
+  font-family: Inter;
+}
+.icon{
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  flex-basis: 50%;
+  margin-top: 135px;
+  right: 120px;
+  left: 30%;
+  justify-content: center;
+}
+button{
+  width: 30%;
+  height: 35px;
+  margin-top: 400px;
+  border: none;
+  font-size: 12px;
+  font-family: inter;
+  border-radius: 6px;
+  background-color: #121955;
+  color: #ffffff;
+  position: absolute;
+  left: 30%;
+}

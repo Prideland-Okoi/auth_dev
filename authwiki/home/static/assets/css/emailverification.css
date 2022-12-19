@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@700&family=Inter:wght@600&family=Lexand+Deca&display=swap")
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@700&family=Inter:wght@600&family=Lexend+Deca&family=Roboto:wght@500&display=swap');
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+body{
+  background-color: #1e1e1e;
+  background-repeat: no-repeat;
+  padding-top: 40px;
+  width: 100vw;
+  height: 100vh;
+}
+.form-wrapper{
+  max-width: 670px;
+  margin: 0 auto;
+}
+.form-container{
+  display: flex;
+  align-items: stretch;
+  color: #002333;
+}
+.form-left{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #D7DBff;
+}
+
+.logo{
+  position: absolute;
+  width: 30px;
+  height: 40px;
+  top: 60px;
+  color: #C4C4C4;
+}
+span{
+  position: absolute;
+  top: 60px;
+  font-size: 25px;
+  font-family: 'Roboto';
+  padding-left: 35px;
+  color: #0D1418
+}
+img{
+  width: 250px;
+  height: 250px;
+  position: relative;
+  flex-basis: 50%;
+}
+.form-right{
+  flex-basis: 50%;
+  padding: 24px;
+  background-color: white;
+  height: 450px;
+  width: 600px;
+}
+h2{
+  font-size: 25px;
+  font-family: inter;
+  color: #0D1848;
+  margin-left: 20px;
+  letter-spacing: -1px;
+  padding: 5px;
+}
+h4{
+  color: #C92525;
+  font-family: inter;
+  font-size: 13px;
+  padding: 25px;
+  align-items: center;
+}
+.otp{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.otp input{
+  width: 22px;
+  height: 35px;
+  font-size: 30px;
+  text-align: center;
+  justify-content: center;
+  border: none;
+  color: #121955;
+  margin: 3px;
+  outline: none;
+  font-family: inter;
+  font-weight: normal;
+  right:10rem;
+  border-bottom: 2px solid #121955;
+}
+
+button{
+  width: 18%;
+  height: 40px;
+  margin-top: 50px;
+  border: none;
+  font-size: 13px;
+  border-radius: 6px;
+  background-color: #121955;
+  color: #ffffff;
+  position: absolute;
+  right: 425px;
+  font-family: inter;
+}
+.chika{
+  position: absolute;
+  align-items: flex-end;
+  color: #FF0000;
+  margin-top: 52px;
+  margin-left: 55px;
+  font-size: 12px;
+  font-family: inter;
+}
+

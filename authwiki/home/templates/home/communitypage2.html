@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community 2</title>
+    <link rel="stylesheet" href="{% static 'assets/css/communitypage2.css' %}"/>
+
+</head>
+
+<body>
+<main>
+
+
+<div class="a"><img src="{% static 'assets/img/crona_icon.png' %}" alt="icon" width="50px" class="auth">
+
+<span class="auth1"> Authwiki</span>
+
+    <p><input type="text" class="search" placeholder="Search"<img src="{% static 'assets/img/search_icon.png" alt=""> </span>
+     <p class="resources"> Resources
+    <span><button type="button" class="feedback"><a href="{% 'home:feedback' %}" class="feed">Feedback</a></button></span>
+    <img src="{% static 'assets/img/img.jpg' %}" alt="img" width="50px" class="img"> <h class="edit"></h><a href="{% url 'userapp:profile' %}.">Edit</a>
+
+
+<span>
+    <div class="side-bar">
+    <img src="{% static 'assets/img/get started.png' %}" alt="" width="30px"></a>
+    <a href="{% 'home:dashboard' %}"><p class="text">Get Started </p></a>
+</div>
+
+<div class="side-bar">
+    <img src="{% static 'assets/img/community_icon.png' %}" alt="" width="25px"></a>
+    <p class="text"><a href="{% 'home:community' %}">Community</a> </p>
+</div>
+
+<div class="side-bar">
+    <img src="{% static 'assets/img/code_icon.png' %}" alt="" width="25px"></a>
+    <p class="text"><a href="{% 'home:error' %}">Auth Library</a> </p>
+</div>
+
+<div class="side-bar">
+    <img src="{% static 'assets/img/bookmarks_icon.png' %}" alt="" width="25px"></a>
+    <p class="text"><a href="{% 'home:community3' %}">Bookmarks</a> </p>
+</div>
+
+<div class="side-bar">
+    <img src="{% static 'assets/images/log_icon.png' %}" alt="" width="25px" ></a>
+    <p class="text"><a href="{% 'home:error %}">Logs</a> </p>
+</div>
+
+<div class="side-bar">
+    <img src="{% static 'assets/img/log_out_icon.png' %}" alt="" width="25px" ></a>
+    <p class="text"><a href="{% url 'userapp:logout_user' %}">Log Out</a> </p>
+</div>
+</span>
+
+
+
+<div class="b"> <h1 class="community">Community <img src="{% static 'assets/img/community_icon.png' %}" width="30px" > </h1>
+<div><img src="{% static 'assets/img/less_than_solid_icon.png' %}" alt="" class="back1"></div>
+<div><a href="{% 'home:community' %}" class="back">Back</a></div>
+    <p class="new-post">Create New Post</p>
+
+     <div><input type="text" name="" class="post-title1" placeholder="Post Title">
+     <p><input type="text" name="" id="post-title2" class="placeholder" placeholder="Type Something"> </div>
+
+    <a href="{% 'home:community3' %}" class="post">Post</button></div>
+    </div>
+</main>
+</body>
